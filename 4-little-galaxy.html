@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    body {
+      background-color: black;
+    }
+
+    .red-circle {
+      border: 2px solid red;
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+      position: relative;
+    }
+
+    .centre-circle {
+      border-radius: 50%;
+      background-color: grey;
+      position: absolute;
+      top: 5em;
+      left: 5em;
+      margin-left: -1em;
+      margin-top: -1em;
+      width: 2em;
+      height: 2em;
+    }
+
+    @keyframes atom {
+/* from and to: 0 - 180 */
+/* from and to: 180 - 360 */
+
+      0% {
+        transform: rotate(0deg)
+                   translate(-5em);
+      }
+      100% {
+        transform: rotate(360deg)
+                   translate(-5em);
+      }
+    }
+
+
+    .smile {
+      width: 2em;
+      height: 2em;
+      position: absolute;
+      top: 4.6em;
+      left: 4.6em;
+      animation: atom 3s infinite linear;
+      background-color: yellow;
+      border-radius: 50%;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div class="red-circle">
+      <div class="centre-circle"></div>
+    </div>
+    <div class="smile"></div>
+  </body>
+</html>
