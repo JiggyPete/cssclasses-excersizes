@@ -11,6 +11,7 @@
       width: 10em;
       height: 10em;
       position: relative;
+      margin: 10em auto 0 auto;
     }
 
     .centre-circle {
@@ -30,11 +31,11 @@
 /* from and to: 180 - 360 */
 
       0% {
-        transform: rotate(0deg)
+        transform: rotate(360deg)
                    translate(-5em);
       }
       100% {
-        transform: rotate(360deg)
+        transform: rotate(0deg)
                    translate(-5em);
       }
     }
@@ -44,19 +45,20 @@
       width: 2em;
       height: 2em;
       position: absolute;
-      top: 4.6em;
-      left: 4.6em;
+      top: -5.8em;
+      left: 3.8em;
       animation: atom 3s infinite linear;
       background-color: yellow;
       border-radius: 50%;
+      margin: 10em auto 0 auto;
     }
 
   </style>
   </head>
   <body>
     <div class="red-circle">
+      <div class="smile"></div>
       <div class="centre-circle"></div>
     </div>
-    <div class="smile"></div>
   </body>
 </html>
