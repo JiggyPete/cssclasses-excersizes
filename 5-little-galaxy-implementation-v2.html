@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    .galaxy {
+      margin: 10em auto 0 auto;
+      border: 2px solid red;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      animation: rotating 2.5s linear infinite;
+      position: relative;
+    }
+
+    .galaxy::before,
+    .galaxy::after{
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .galaxy::before {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      top: -25px;
+      left: 75px;
+    }
+
+    .galaxy::after {
+      width: 40px;
+      height: 40px;
+      background-color: #a6a6a6;
+      left: 80px;
+      top: 80px;
+    }
+
+    @keyframes rotating {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="galaxy"></div>
+  </body>
+</html>
